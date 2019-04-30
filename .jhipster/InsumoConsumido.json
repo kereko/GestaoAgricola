@@ -1,0 +1,36 @@
+{
+    "name": "InsumoConsumido",
+    "fields": [
+        {
+            "fieldName": "quantidade",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "custoTotal",
+            "fieldType": "Double"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipName": "plantio",
+            "otherEntityName": "plantio",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "insumo",
+            "otherEntityRelationshipName": "insumoConsumido",
+            "relationshipName": "insumo"
+        }
+    ],
+    "changelogDate": "20190430181050",
+    "entityTableName": "insumo_consumido",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

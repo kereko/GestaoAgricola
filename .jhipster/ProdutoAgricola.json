@@ -1,0 +1,33 @@
+{
+    "name": "ProdutoAgricola",
+    "fields": [
+        {
+            "fieldName": "nome",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "colheita",
+            "otherEntityRelationshipName": "produtoAgricola",
+            "relationshipName": "colheita",
+            "ownerSide": false
+        },
+        {
+            "relationshipName": "produtoVenda",
+            "otherEntityName": "produtoVenda",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190430181052",
+    "entityTableName": "produto_agricola",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

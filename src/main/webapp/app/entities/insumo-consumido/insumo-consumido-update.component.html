@@ -1,0 +1,41 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+            <h2 id="jhi-insumo-consumido-heading">Create or edit a Insumo Consumido</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!insumoConsumido.id">
+                    <label for="id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id"
+                        [(ngModel)]="insumoConsumido.id" readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_quantidade">Quantidade</label>
+                    <input type="number" class="form-control" name="quantidade" id="field_quantidade"
+                        [(ngModel)]="insumoConsumido.quantidade" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_custoTotal">Custo Total</label>
+                    <input type="number" class="form-control" name="custoTotal" id="field_custoTotal"
+                        [(ngModel)]="insumoConsumido.custoTotal" />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="field_plantio">Plantio</label>
+                    <select class="form-control" id="field_plantio" name="plantio" [(ngModel)]="insumoConsumido.plantio" >
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="plantioOption.id === insumoConsumido.plantio?.id ? insumoConsumido.plantio : plantioOption" *ngFor="let plantioOption of plantios; trackBy: trackPlantioById">{{plantioOption.id}}</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span>Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span>Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

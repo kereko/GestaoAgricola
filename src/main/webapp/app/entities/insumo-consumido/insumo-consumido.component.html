@@ -1,0 +1,62 @@
+<div>
+    <h2 id="page-heading">
+        <span>Insumo Consumidos</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-insumo-consumido" [routerLink]="['/insumo-consumido/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span >
+            Create new Insumo Consumido
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div class="table-responsive" *ngIf="insumoConsumidos">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+            <th><span>ID</span></th>
+            <th><span>Quantidade</span></th>
+            <th><span>Custo Total</span></th>
+            <th><span>Plantio</span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let insumoConsumido of insumoConsumidos ;trackBy: trackId">
+                <td><a [routerLink]="['/insumo-consumido', insumoConsumido.id, 'view' ]">{{insumoConsumido.id}}</a></td>
+                <td>{{insumoConsumido.quantidade}}</td>
+                <td>{{insumoConsumido.custoTotal}}</td>
+                <td>
+                    <div *ngIf="insumoConsumido.plantio">
+                        <a [routerLink]="['../plantio', insumoConsumido.plantio?.id, 'view' ]" >{{insumoConsumido.plantio?.id}}</a>
+                    </div>
+                </td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['/insumo-consumido', insumoConsumido.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/insumo-consumido', insumoConsumido.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', 'insumo-consumido', { outlets: { popup: insumoConsumido.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

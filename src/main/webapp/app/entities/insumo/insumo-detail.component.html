@@ -1,0 +1,45 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="insumo">
+            <h2><span>Insumo</span> {{insumo.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Nome</span></dt>
+                <dd>
+                    <span>{{insumo.nome}}</span>
+                </dd>
+                <dt><span>Qtd Estoque</span></dt>
+                <dd>
+                    <span>{{insumo.qtdEstoque}}</span>
+                </dd>
+                <dt><span>Custo Por Unidade</span></dt>
+                <dd>
+                    <span>{{insumo.custoPorUnidade}}</span>
+                </dd>
+                <dt><span>Categoria</span></dt>
+                <dd>
+                    <span>{{insumo.categoria}}</span>
+                </dd>
+                <dt><span>Insumo Consumido</span></dt>
+                <dd>
+                    <div *ngIf="insumo.insumoConsumido">
+                        <a [routerLink]="['/insumo-consumido', insumo.insumoConsumido?.id, 'view']">{{insumo.insumoConsumido?.id}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/insumo', insumo.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

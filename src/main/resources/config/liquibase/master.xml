@@ -5,6 +5,28 @@
     xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
 
     <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190430181043_added_entity_Produtor.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190430181044_added_entity_Fazenda.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190430181045_added_entity_Talhao.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190430181046_added_entity_Safra.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190430181047_added_entity_Cultura.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190430181048_added_entity_Plantio.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190430181049_added_entity_Insumo.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190430181050_added_entity_InsumoConsumido.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190430181051_added_entity_Colheita.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190430181052_added_entity_ProdutoAgricola.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190430181053_added_entity_ProdutoVenda.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190430181054_added_entity_Venda.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190430181055_added_entity_Cliente.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <include file="config/liquibase/changelog/20190430181044_added_entity_constraints_Fazenda.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190430181045_added_entity_constraints_Talhao.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190430181046_added_entity_constraints_Safra.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190430181048_added_entity_constraints_Plantio.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190430181049_added_entity_constraints_Insumo.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190430181050_added_entity_constraints_InsumoConsumido.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190430181051_added_entity_constraints_Colheita.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190430181052_added_entity_constraints_ProdutoAgricola.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190430181054_added_entity_constraints_Venda.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
 </databaseChangeLog>
