@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <!--
+        Added the constraints for entity Plantio.
+    -->
+    <changeSet id="20190430181047-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="talhao_id"
+                                 baseTableName="plantio"
+                                 constraintName="fk_plantio_talhao_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="talhao"/>
+
+        <addForeignKeyConstraint baseColumnNames="cultura_id"
+                                 baseTableName="plantio"
+                                 constraintName="fk_plantio_cultura_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="cultura"/>
+
+        <addForeignKeyConstraint baseColumnNames="colheita_id"
+                                 baseTableName="plantio"
+                                 constraintName="fk_plantio_colheita_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="colheita"/>
+
+    </changeSet>
+</databaseChangeLog>
