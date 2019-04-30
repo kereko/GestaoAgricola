@@ -1,0 +1,62 @@
+{
+    "name": "Plantio",
+    "fields": [
+        {
+            "fieldName": "dataPlantio",
+            "javadoc": "The firstname attribute.",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "dataPrevisaoColheita",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "quantidadePlantado",
+            "fieldType": "Double"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipName": "talhao",
+            "otherEntityName": "talhao",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipName": "cultura",
+            "otherEntityName": "cultura",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "colheita",
+            "otherEntityRelationshipName": "plantio",
+            "relationshipName": "colheita",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "safra",
+            "otherEntityRelationshipName": "plantio",
+            "relationshipName": "safra"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "insumoConsumido",
+            "otherEntityRelationshipName": "plantio",
+            "relationshipName": "insumoConsumido"
+        }
+    ],
+    "changelogDate": "20190430181048",
+    "javadoc": "The Employee entity.",
+    "entityTableName": "plantio",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

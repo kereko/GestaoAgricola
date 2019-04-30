@@ -1,0 +1,38 @@
+{
+    "name": "Insumo",
+    "fields": [
+        {
+            "fieldName": "nome",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "qtdEstoque",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "custoPorUnidade",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "categoria",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipName": "insumoConsumido",
+            "otherEntityName": "insumoConsumido",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190430181049",
+    "entityTableName": "insumo",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}
