@@ -91,7 +91,7 @@ public class PlantioResourceIntTest {
      * This is a static method, as tests for other entities might also need it,
      * if they test an entity which requires the current entity.
      */
-    public static Plantio createEntity(EntityManager em) {
+    public static Plantio mockEntity(EntityManager em) {
         Plantio plantio = new Plantio()
             .dataPlantio(DEFAULT_DATA_PLANTIO)
             .dataPrevisaoColheita(DEFAULT_DATA_PREVISAO_COLHEITA)
@@ -101,7 +101,7 @@ public class PlantioResourceIntTest {
 
     @Before
     public void initTest() {
-        plantio = createEntity(em);
+        plantio = mockEntity(em);
     }
 
     @Test

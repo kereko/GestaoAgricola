@@ -36,7 +36,6 @@ public class Colheita implements Serializable {
     @JsonIgnore
     private Plantio plantio;
 
-    // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public Long getId() {
         return id;
     }
@@ -94,7 +93,10 @@ public class Colheita implements Serializable {
     }
 
     public void setPlantio(Plantio plantio) {
-        this.plantio = plantio;
+        if (plantio!=null && plantio.getDataPlantio()!=null && plantio.getDataPlantio().isBefore(dataColheita))
+            this.plantio = plantio;
+        else
+            this.plantio = null;
     }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 

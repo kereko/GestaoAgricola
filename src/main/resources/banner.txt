@@ -1,10 +1,9 @@
 
-  ${AnsiColor.GREEN}      ██╗${AnsiColor.RED} ██╗   ██╗ ████████╗ ███████╗   ██████╗ ████████╗ ████████╗ ███████╗
-  ${AnsiColor.GREEN}      ██║${AnsiColor.RED} ██║   ██║ ╚══██╔══╝ ██╔═══██╗ ██╔════╝ ╚══██╔══╝ ██╔═════╝ ██╔═══██╗
-  ${AnsiColor.GREEN}      ██║${AnsiColor.RED} ████████║    ██║    ███████╔╝ ╚█████╗     ██║    ██████╗   ███████╔╝
-  ${AnsiColor.GREEN}██╗   ██║${AnsiColor.RED} ██╔═══██║    ██║    ██╔════╝   ╚═══██╗    ██║    ██╔═══╝   ██╔══██║
-  ${AnsiColor.GREEN}╚██████╔╝${AnsiColor.RED} ██║   ██║ ████████╗ ██║       ██████╔╝    ██║    ████████╗ ██║  ╚██╗
-  ${AnsiColor.GREEN} ╚═════╝ ${AnsiColor.RED} ╚═╝   ╚═╝ ╚═══════╝ ╚═╝       ╚═════╝     ╚═╝    ╚═══════╝ ╚═╝   ╚═╝
+  ${AnsiColor.GREEN}   ____           _   /\/|         _              __          _
+  ${AnsiColor.GREEN}  / ___| ___  ___| |_|/\/_  ___   / \   __ _ _ __/_/ ___ ___ | | __ _
+  ${AnsiColor.GREEN} | |  _ / _ \/ __| __/ _` |/ _ \ / _ \ / _` | '__| |/ __/ _ \| |/ _` |
+  ${AnsiColor.GREEN} | |_| |  __/\__ \ || (_| | (_) / ___ \ (_| | |  | | (_| (_) | | (_| |
+  ${AnsiColor.GREEN}  \____|\___||___/\__\__,_|\___/_/   \_\__, |_|  |_|\___\___/|_|\__,_|
+  ${AnsiColor.GREEN}                                       |___/
 
-${AnsiColor.BRIGHT_BLUE}:: JHipster 🤓  :: Running Spring Boot ${spring-boot.version} ::
-:: https://www.jhipster.tech ::${AnsiColor.DEFAULT}
+${AnsiColor.BRIGHT_BLUE}:: GestãoAgrícola 1.0 🌳  :: Running Spring Boot ${spring-boot.version} ::

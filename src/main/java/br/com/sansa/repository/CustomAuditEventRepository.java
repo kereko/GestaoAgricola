@@ -3,6 +3,7 @@ package br.com.sansa.repository;
 import br.com.sansa.config.Constants;
 import br.com.sansa.config.audit.AuditEventConverter;
 import br.com.sansa.domain.PersistentAuditEvent;
+import br.com.sansa.repository.PersistenceAuditEventRepository;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

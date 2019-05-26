@@ -88,7 +88,7 @@ public class ColheitaResourceIntTest {
      * This is a static method, as tests for other entities might also need it,
      * if they test an entity which requires the current entity.
      */
-    public static Colheita createEntity(EntityManager em) {
+    public static Colheita mockEntity(EntityManager em) {
         Colheita colheita = new Colheita()
             .dataColheita(DEFAULT_DATA_COLHEITA)
             .produtividade(DEFAULT_PRODUTIVIDADE);
@@ -97,7 +97,7 @@ public class ColheitaResourceIntTest {
 
     @Before
     public void initTest() {
-        colheita = createEntity(em);
+        colheita = mockEntity(em);
     }
 
     @Test

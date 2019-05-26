@@ -42,14 +42,13 @@ public class SafraResource {
      */
     @PostMapping("/safras")
     public ResponseEntity<Safra> createSafra(@Valid @RequestBody Safra safra) throws URISyntaxException {
-        log.debug("REST request to save Safra : {}", safra);
         if (safra.getId() != null) {
-            throw new BadRequestAlertException("A new safra cannot already have an ID", ENTITY_NAME, "idexists");
+            throw new BadRequestAlertException("Uma nova safra não pode ter ID", ENTITY_NAME, "idexists");
         }
-        Safra result = safraRepository.save(safra);
-        return ResponseEntity.created(new URI("/api/safras/" + result.getId()))
-            .headers(HeaderUtil.createEntityCreationAlert(ENTITY_NAME, result.getId().toString()))
-            .body(result);
+        Safra resultado = safraRepository.save(safra);
+        return ResponseEntity.created(new URI("/api/safras/" + resultado.getId()))
+            .headers(HeaderUtil.createEntityCreationAlert(ENTITY_NAME, resultado.getId().toString()))
+            .body(resultado);
     }
 
     /**
